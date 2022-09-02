@@ -1,0 +1,15 @@
+button {
+    text-align: center;
+    font-size: 4em;
+}
+
+
+#left{
+    transform: scaleX(-1);
+}
+.slide{
+    opacity: 0;
+}
+.slide[data-active]{
+    opacity: 1;
+}
