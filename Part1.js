@@ -45,10 +45,19 @@
   }
   load().then(data=>{
     console.log(data)
-    document.querySelector("form").onsubmit=()=>{
-        const currency= document.querySelector("#currency").value;
-        const rate=data.bpi[currency].code;
-        document.querySelector("#result").innerHTML=rate;
+        let index=0;
+        let length=Object.keys(data.bpi).length-1;
+        const myFunction=()=>{
+        console.log(index)
+        index===0?index=length:index-=1
+    
+        const rate=Object.keys(data.bpi)[index];
+        console.log(rate)
+        document.querySelector("#result").innerHTML=data.bpi[rate].code;}
+        document.querySelector("#right").addEventListener("click", myFunction);
+
+        document.querySelector("form").onsubmit=()=>{     
+        
         return false;
     }
     })
