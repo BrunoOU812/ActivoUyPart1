@@ -19,7 +19,11 @@
         const next=()=>{
         index===0?index=length:index-=1;    
         element(index);
-    }
-
+        }
+        const previous=()=>{
+            index===length?index=0:index+=1;    
+            element(index);
+            }
+        document.querySelector("#left").addEventListener("click", previous);
         document.querySelector("#right").addEventListener("click", next);
     })
