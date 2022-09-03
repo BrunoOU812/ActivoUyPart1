@@ -43,23 +43,35 @@
       resolve(res.json())
     })
   }
-  load().then(data=>{
-    console.log(data)
+  load().then(response=>{
         let index=0;
-        let length=Object.keys(data.bpi).length-1;
-        const myFunction=()=>{
-        console.log(index)
-        index===0?index=length:index-=1
-    
-        const rate=Object.keys(data.bpi)[index];
-        console.log(rate)
-        document.querySelector("#result").innerHTML=data.bpi[rate].code;}
-        document.querySelector("#right").addEventListener("click", myFunction);
-
-        document.querySelector("form").onsubmit=()=>{     
-        
-        return false;
+        let length=Object.keys(response.bpi).length-1;
+        const element =(item)=>{
+                    const card= document.createElement("li");
+                    const isoCode= document.createElement("h1");
+                    const description= document.createElement("p");
+                    const rate= document.createElement("span");
+                    const data=response.bpi[item];
+                    isoCode.innerHTML= `${data.code} `;
+                    description.innerHTML= `${data.description} `;
+                    rate.innerHTML= `${data.symbol} ${data.rate} `;
+                    card.appendChild(isoCode);
+                    card.appendChild(description);
+                    card.appendChild(rate);
+                    carousel.appendChild(card);  
+        }
+        const next=()=>{
+        index===0?index=length:index-=1;    
+        const rate=Object.keys(response.bpi)[index];
+        document.querySelector("#result").innerHTML=response.bpi[rate].code;
+        element(rate);
     }
+
+        document.querySelector("#right").addEventListener("click", next);
+
+        document.querySelector("form").onsubmit=()=>{  
+        return false;
+        }
     })
     // const currency= document.querySelector("#currency").value;
     // const rates=response;
