@@ -7,9 +7,10 @@ button {
 #left{
     transform: scaleX(-1);
 }
-.slide{
+.card {
     opacity: 0;
-}
-.slide[data-active]{
+  }
+  
+  .visible {
     opacity: 1;
-}
+  }
