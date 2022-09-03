@@ -47,23 +47,15 @@
         let index=0;
         let length=Object.keys(response.bpi).length-1;
         const element =(item)=>{
-                    const card= document.createElement("li");
-                    const isoCode= document.createElement("h1");
-                    const description= document.createElement("p");
-                    const rate= document.createElement("span");
                     const data=response.bpi[item];
-                    isoCode.innerHTML= `${data.code} `;
-                    description.innerHTML= `${data.description} `;
-                    rate.innerHTML= `${data.symbol} ${data.rate} `;
-                    card.appendChild(isoCode);
-                    card.appendChild(description);
-                    card.appendChild(rate);
-                    carousel.appendChild(card);  
-        }
+                    document.querySelector("h1").innerHTML=`${data.code} `;
+                    document.querySelector("p").innerHTML=`${data.description} `;
+                    document.querySelector("span").innerHTML= `${data.symbol} ${data.rate} `;
+
+                    }
         const next=()=>{
         index===0?index=length:index-=1;    
         const rate=Object.keys(response.bpi)[index];
-        document.querySelector("#result").innerHTML=response.bpi[rate].code;
         element(rate);
     }
 
