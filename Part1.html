@@ -4,19 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Part1styles.css">
+    <link rel="stylesheet" href="styles.css">
     <title>Part 1</title>
 </head>
 <body>
-    <div id="result"></div>
-    <main>
-        <h1>Bitcoin <small>BTC</small></h1>
-        <div id="carousel"> 
-            <h1></h1>
-            <p></p>
-            <span></span>            
-            <button id="left">&#10132;</button>
-            <button id="right">&#10132;</button>
+    <main>        
+        <div class="panel">
+            <div class="panel__container">
+                <img class="panel__img" src="./assets/bitcoin.png" alt="">
+                <h1 class="panel__title">Bitcoin <small>BTC</small></h1>
+             </div>
+            <div id="carousel" class="container"> 
+                <h2 class="container__h2"></h2>
+                <span class="container__span"></span> 
+                <p class="container__p"></p>
+                <div class="container__group" >         
+                    <button id="left" class="container__button container__button--left">&#10132;</button>
+                    <button id="right" class="container__button">&#10132;</button>
+                </div>
+            </div>
         </div>
     </main>
     <script src="Part1.js"></script>

@@ -1,0 +1,117 @@
+@import url("https://use.typekit.net/rsw3bla.css");
+@import url('http://fonts.cdnfonts.com/css/saira');
+
+$base-color:#333;
+$brand-color:#ff6801;
+$black-color:#1a1a1a;
+$rubik:rubik, sans-serif;
+$saira:'Saira', sans-serif;
+$colors:(
+        purple:#6a37e5,
+        yellow:#effd5e,
+        orange:#e0773e,
+        red:#c82f2e,
+        green:#6ee3a5,
+        blue:#0d49f5
+            );
+$transparent:rgba(255,255,255,0);
+$radius:50px;
+$extra:1200px;
+$large:960px;
+$medium:760px;
+$small:480px;
+$tiny:320;
+$toggle-size:35px;
+$toggle-classes: ("info","purple", "yellow", "orange", "red", "green", "blue","testimonial");
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{    
+background: linear-gradient(45deg, yellow, magenta, #6a37e5);
+}
+@mixin flex($direction:row,$justify:center){
+    display: flex;
+    justify-content: $justify;
+    align-items: center;
+    flex-direction: $direction;
+}
+@mixin title($size:5vw){
+    font-family: $saira;
+    font-size: $size;
+    color: white;
+}
+@mixin text($size:3vw,$family:$saira){
+    font-family: $family;
+    font-size: $size;
+    color: white;
+}
+@mixin panel($width:80vw,$height:45vw,$background:$black-color){
+    width:$width;
+    height:$height;
+    border-radius: $radius;
+    background-color: $background;
+}
+main{
+ @include flex;
+ height: 100vh;
+ width: 100vw;
+}
+.container {
+ @include flex($direction:column,$justify:space-between);
+ @include panel(80vw,30vw,$transparent); 
+ &__button {
+    color: white;
+    background-color: $brand-color;
+    font-size: 3vw;
+    line-height: 1vw;
+    border-radius: 0 $radius $radius 0;
+    width: 5vw;
+    height: 5vw;
+    &--left{
+        transform: rotate(180deg);
+    }
+    &:hover{
+        background-color:#6a37e5;
+    }
+    &:focus{
+        background-color:#6a37e5;
+    }
+    &:active{
+        background-color:#0d49f5;
+    }
+  }
+  &__group {
+    padding-bottom: 3vw;
+  }
+  &__h2 {
+    @include title(15vw);
+    line-height: 10vw;
+  }
+  &__p {
+    @include text;
+  }
+  &__span {
+    @include text(5vw);
+
+  }
+}
+.panel {
+ @include flex(column);
+ @include panel($transparent); 
+    background-color: $black-color;
+  &__container{
+    @include flex();
+    height: 15vw;;
+  }
+  &__img{
+    display: inline;
+    height: 10vw;
+  }
+  &__title {
+    display: inline;
+    margin: 0;
+    @include title();
+  }
+}

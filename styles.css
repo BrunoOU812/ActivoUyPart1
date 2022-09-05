@@ -1,0 +1,139 @@
+@import url("https://use.typekit.net/rsw3bla.css");
+@import url("http://fonts.cdnfonts.com/css/saira");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(45deg, yellow, magenta, #6a37e5);
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 100vh;
+  width: 100vw;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 80vw;
+  height: 30vw;
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, 0);
+}
+.container__button {
+  color: white;
+  background-color: #ff6801;
+  font-size: 3vw;
+  line-height: 1vw;
+  border-radius: 0 50px 50px 0;
+  width: 5vw;
+  height: 5vw;
+}
+.container__button--left {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.container__button:hover {
+  background-color: #6a37e5;
+}
+.container__button:focus {
+  background-color: #6a37e5;
+}
+.container__button:active {
+  background-color: #0d49f5;
+}
+.container__group {
+  padding-bottom: 3vw;
+}
+.container__h2 {
+  font-family: "Saira", sans-serif;
+  font-size: 15vw;
+  color: white;
+  line-height: 10vw;
+}
+.container__p {
+  font-family: "Saira", sans-serif;
+  font-size: 3vw;
+  color: white;
+}
+.container__span {
+  font-family: "Saira", sans-serif;
+  font-size: 5vw;
+  color: white;
+}
+
+.panel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: rgba(255, 255, 255, 0);
+  height: 45vw;
+  border-radius: 50px;
+  background-color: #1a1a1a;
+  background-color: #1a1a1a;
+}
+.panel__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 15vw;
+}
+.panel__img {
+  display: inline;
+  height: 10vw;
+}
+.panel__title {
+  display: inline;
+  margin: 0;
+  font-family: "Saira", sans-serif;
+  font-size: 5vw;
+  color: white;
+}
